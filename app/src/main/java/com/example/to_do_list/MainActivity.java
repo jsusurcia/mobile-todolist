@@ -63,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void mostrarTareas() {
+        contenedorTareas.removeAllViews();
+
         tareaDAO.open();
         List<Tarea> tareas = tareaDAO.obtenerTodos();
         tareaDAO.close();
